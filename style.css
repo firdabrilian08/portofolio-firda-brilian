@@ -1,0 +1,1507 @@
+
+/* 1. Pengaturan dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fbfaf7;
+    color: #26352f;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 2. Navigasi */
+header {
+    background-color: #fbfaf7;
+    border-bottom: 1px solid #e4e8e2;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #43806b;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 14px;
+    color: #58665f;
+}
+
+.nav-links a:hover {
+    color: #43806b;
+}
+
+/* 3. Hero section */
+.hero {
+    max-width: 1100px;
+    min-height: 80vh;
+    margin: auto;
+    padding: 70px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-content {
+    flex: 1.2;
+}
+
+.greeting {
+    color: #43806b;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 65px);
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.hero h1 span {
+    color: #43806b;
+}
+
+.hero h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.description {
+    max-width: 570px;
+    color: #68756e;
+    margin-bottom: 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background-color: #2f6558;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #214a40;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 1px solid #d9e0d9;
+    background-color: white;
+}
+
+.btn-secondary:hover {
+    border-color: #2f6558;
+}
+
+/* 4. Kartu profil */
+.hero-visual {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-card {
+    width: 300px;
+    padding: 35px 20px;
+    background-color: #e8f1eb;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.profile-initial {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 20px;
+    display: grid;
+    place-items: center;
+    background-color: #2f6558;
+    color: white;
+    font-size: 38px;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+.profile-card h3 {
+    margin-bottom: 5px;
+}
+
+.profile-card p {
+    color: #52675d;
+    margin-bottom: 8px;
+}
+
+.profile-card span {
+    font-size: 13px;
+    color: #68756e;
+}
+
+/* 5. Footer */
+footer {
+    padding: 22px 15px;
+    text-align: center;
+    border-top: 1px solid #e4e8e2;
+    color: #68756e;
+    font-size: 13px;
+}
+
+/* 6. Tampilan smartphone */
+@media (max-width: 760px) {
+    .navbar {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .nav-links {
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        gap: 10px 15px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-top: 55px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-visual {
+        margin-top: 10px;
+    }
+
+    .profile-card {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+/* ==========================
+   ABOUT ME SECTION
+========================== */
+
+.about-section {
+    padding: 90px 20px;
+    background-color: #ffffff;
+}
+
+.about-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Judul */
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-label {
+    color: #43806b;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.section-heading h2 span {
+    color: #43806b;
+}
+
+.section-subtitle {
+    color: #68756e;
+    font-size: 15px;
+}
+
+/* Layout utama */
+.about-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 45px;
+    align-items: start;
+}
+
+/* Kartu identitas */
+.about-profile {
+    background-color: #e8f1eb;
+    border-radius: 22px;
+    padding: 30px;
+    text-align: center;
+    position: sticky;
+    top: 100px;
+}
+
+.about-avatar {
+    width: 105px;
+    height: 105px;
+    margin: 0 auto 18px;
+    display: grid;
+    place-items: center;
+    background-color: #2f6558;
+    color: white;
+    border-radius: 28px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.about-profile h3 {
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+
+.profile-role {
+    color: #527064;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* Detail identitas */
+.profile-details {
+    text-align: left;
+    border-top: 1px solid #cbdcd0;
+}
+
+.profile-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #cbdcd0;
+}
+
+.profile-item span {
+    display: block;
+    color: #68756e;
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+
+.profile-item strong {
+    display: block;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.profile-location {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #426b58;
+    font-weight: bold;
+}
+
+/* Konten About */
+.about-content {
+    padding-top: 5px;
+}
+
+.about-greeting {
+    color: #43806b;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.about-content > h3 {
+    font-size: 29px;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.about-content > p:not(.about-greeting) {
+    color: #68756e;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+/* Subsection */
+.about-subsection {
+    margin-top: 32px;
+}
+
+.about-subsection h4 {
+    font-size: 19px;
+    margin-bottom: 16px;
+}
+
+/* Pendidikan */
+.education-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px;
+    background-color: #f4f7f2;
+    border-radius: 14px;
+    border: 1px solid #e4eae2;
+}
+
+.education-icon {
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    background-color: #e1eee4;
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+.education-card h5 {
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+
+.education-card p {
+    font-size: 13px;
+    color: #52665c;
+}
+
+.education-card span {
+    font-size: 12px;
+    color: #7a867f;
+}
+
+/* Aktivitas */
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+
+.activity-item {
+    display: flex;
+    gap: 13px;
+    align-items: flex-start;
+}
+
+.activity-dot {
+    width: 11px;
+    height: 11px;
+    margin-top: 6px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: #43806b;
+}
+
+.activity-item strong {
+    font-size: 14px;
+}
+
+.activity-item p {
+    font-size: 13px;
+    color: #68756e;
+    margin-top: 3px;
+    line-height: 1.7;
+}
+
+/* Responsive About */
+@media (max-width: 760px) {
+
+    .about-section {
+        padding: 65px 15px;
+    }
+
+    .section-heading h2 {
+        font-size: 33px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-profile {
+        position: static;
+    }
+
+    .about-content > h3 {
+        font-size: 25px;
+    }
+
+    .about-content > p:not(.about-greeting) {
+        text-align: left;
+    }
+}
+
+/* ==========================
+   WHAT I CAN DO SECTION
+========================== */
+
+.skills-section {
+    padding: 90px 20px;
+    background-color: #f1f5f0;
+}
+
+.skills-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Judul section */
+.skills-section .section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.skills-section .section-heading h2 {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.skills-section .section-heading h2 span {
+    color: #43806b;
+}
+
+.skills-section .section-subtitle {
+    color: #68756e;
+    font-size: 15px;
+}
+
+/* Grid kartu kemampuan */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Kartu skill */
+.skill-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border: 1px solid #e4eae2;
+    border-radius: 18px;
+    transition: 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(47, 101, 88, 0.09);
+    border-color: #b8d2bf;
+}
+
+/* Ikon */
+.skill-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    background-color: #e8f1eb;
+    border-radius: 14px;
+    font-size: 23px;
+    margin-bottom: 19px;
+}
+
+/* Informasi skill */
+.skill-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.skill-card > p {
+    color: #68756e;
+    font-size: 13px;
+    line-height: 1.8;
+    min-height: 94px;
+    margin-bottom: 17px;
+}
+
+/* Skill tags */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 20px;
+}
+
+.skill-tags span {
+    background-color: #f0f5f0;
+    border: 1px solid #e0e9e0;
+    color: #426b58;
+    font-size: 11px;
+    padding: 6px 10px;
+    border-radius: 20px;
+}
+
+/* Level kemampuan */
+.skill-level {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 13px;
+    border-top: 1px solid #edf0eb;
+}
+
+.skill-level span {
+    color: #89928c;
+    font-size: 11px;
+}
+
+.skill-level strong {
+    color: #43806b;
+    font-size: 12px;
+}
+
+/* Tools section */
+.tools-section {
+    margin-top: 75px;
+    text-align: center;
+}
+
+.tools-section h3 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.tools-description {
+    font-size: 14px;
+    color: #68756e;
+    margin-bottom: 28px;
+}
+
+.tools-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.tool-item {
+    min-width: 135px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 17px;
+    background-color: #ffffff;
+    border: 1px solid #e4eae2;
+    border-radius: 12px;
+    transition: 0.2s ease;
+}
+
+.tool-item:hover {
+    border-color: #43806b;
+    transform: translateY(-3px);
+}
+
+.tool-item span {
+    font-size: 20px;
+}
+
+.tool-item p {
+    font-size: 13px;
+    font-weight: bold;
+    color: #42564b;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .skills-section {
+        padding: 65px 15px;
+    }
+
+    .skills-section .section-heading h2 {
+        font-size: 33px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card > p {
+        min-height: auto;
+    }
+
+    .tools-section {
+        margin-top: 55px;
+    }
+
+    .tool-item {
+        flex: 1 1 125px;
+    }
+
+}
+
+/* ==========================
+   ACHIEVEMENT SECTION
+========================== */
+
+.achievement-section {
+    padding: 90px 20px;
+    background-color: #fbfaf7;
+}
+
+.achievement-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Judul */
+.achievement-section .section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.achievement-section .section-heading h2 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.achievement-section .section-heading h2 span {
+    color: #43806b;
+}
+
+/* Grid */
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    align-items: start;
+}
+
+/* Kartu pencapaian */
+.achievement-card {
+    background-color: white;
+    border: 1px solid #e4eae2;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(47, 101, 88, 0.10);
+}
+
+/* Area preview sertifikat */
+.certificate-preview {
+    min-height: 230px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.gemini-preview {
+    background: linear-gradient(
+        135deg,
+        #e5eee6,
+        #d3e4d8
+    );
+}
+
+.dicoding-preview {
+    background: linear-gradient(
+        135deg,
+        #f4e9dc,
+        #ead9c7
+    );
+}
+
+.certificate-decoration {
+    width: 85%;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.75);
+    border: 2px solid rgba(255,255,255,0.9);
+    border-radius: 12px;
+    padding: 18px;
+    z-index: 1;
+}
+
+.certificate-decoration span {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #527064;
+    font-weight: bold;
+}
+
+.certificate-decoration h3 {
+    font-size: 27px;
+    color: #2f6558;
+    margin: 8px 0;
+}
+
+.certificate-decoration p {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #68756e;
+}
+
+.dicoding-preview .certificate-decoration h3 {
+    font-size: 22px;
+}
+
+.preview-label {
+    position: absolute;
+    right: 15px;
+    bottom: 12px;
+    color: #527064;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+
+/* Isi kartu */
+.achievement-content {
+    padding: 25px;
+}
+
+.achievement-category {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #43806b;
+    background-color: #e8f1eb;
+    padding: 6px 11px;
+    border-radius: 20px;
+    margin-bottom: 13px;
+}
+
+.achievement-content h3 {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.achievement-content > p {
+    color: #68756e;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+    min-height: 94px;
+}
+
+/* Informasi tahun dan penyelenggara */
+.achievement-info {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 12px;
+    padding: 15px 0;
+    border-top: 1px solid #e9ede8;
+    border-bottom: 1px solid #e9ede8;
+}
+
+.achievement-info span {
+    display: block;
+    color: #89928c;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+.achievement-info strong {
+    font-size: 12px;
+    color: #40584a;
+}
+
+/* Bukti sertifikat */
+.achievement-proof {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+    padding: 12px;
+    background-color: #f5f7f3;
+    border-radius: 10px;
+}
+
+.achievement-proof span {
+    font-size: 20px;
+}
+
+.achievement-proof p {
+    color: #68756e;
+    font-size: 12px;
+}
+
+/* Penutup */
+.achievement-note {
+    margin-top: 45px;
+    padding: 22px;
+    background-color: #e8f1eb;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.achievement-note span {
+    font-size: 25px;
+}
+
+.achievement-note p {
+    font-size: 13px;
+    color: #52665c;
+    line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 760px) {
+
+    .achievement-section {
+        padding: 65px 15px;
+    }
+
+    .achievement-section .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .achievement-content > p {
+        min-height: auto;
+    }
+
+}
+
+/* ==========================
+   PROJECTS / WORK GALLERY
+========================== */
+
+.projects-section {
+    padding: 90px 20px;
+    background-color: #ffffff;
+}
+
+.projects-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Judul */
+.projects-section .section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.projects-section .section-heading h2 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.projects-section .section-heading h2 span {
+    color: #43806b;
+}
+
+/* Grid project */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    align-items: stretch;
+}
+
+/* Kartu */
+.project-card {
+    background-color: #ffffff;
+    border: 1px solid #e4eae2;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(47, 101, 88, 0.10);
+}
+
+/* Area cover */
+.project-cover {
+    height: 240px;
+    padding: 22px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.project-number {
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #52675b;
+}
+
+/* Cover Aruna Coffee */
+.aruna-cover {
+    background-color: #dcebe1;
+}
+
+.aruna-preview {
+    text-align: center;
+    color: #2f6558;
+    transform: rotate(-3deg);
+}
+
+.aruna-preview .preview-small {
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.aruna-preview h3 {
+    font-size: 45px;
+    line-height: 1;
+    margin: 12px 0;
+    letter-spacing: 2px;
+}
+
+.aruna-preview .preview-caption {
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* Cover Smart Cafe */
+.smart-cover {
+    background-color: #f3e6d9;
+}
+
+.smart-preview {
+    text-align: center;
+    color: #72583f;
+}
+
+.smart-preview .wifi-icon {
+    display: block;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.smart-preview h3 {
+    font-size: 42px;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.smart-preview p {
+    margin-top: 9px;
+    font-size: 12px;
+}
+
+.wifi-label {
+    margin-top: 18px;
+    border-top: 1px solid #cdb69c;
+    padding-top: 9px;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+/* Cover AI */
+.ai-cover {
+    background-color: #e7e8f4;
+}
+
+.ai-preview {
+    position: relative;
+    text-align: center;
+    color: #4e537e;
+}
+
+.ai-preview .ai-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.ai-preview h3 {
+    font-size: 29px;
+    line-height: 1.2;
+    margin-top: 10px;
+}
+
+.ai-symbol {
+    display: block;
+    font-size: 40px;
+    margin: 6px 0;
+    color: #858bc2;
+}
+
+.ai-preview p {
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* Cover Photo Journaling */
+.photo-cover {
+    background-color: #e8ecdf;
+}
+
+.photo-preview {
+    text-align: center;
+    color: #52654e;
+}
+
+.photo-symbol {
+    font-size: 35px;
+}
+
+.photo-preview h3 {
+    font-size: 35px;
+    line-height: 1.1;
+    margin: 8px 0;
+    letter-spacing: 2px;
+}
+
+.photo-preview p {
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* Isi project */
+.project-content {
+    padding: 25px;
+}
+
+.project-category {
+    display: inline-block;
+    padding: 6px 10px;
+    background-color: #e8f1eb;
+    color: #43806b;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-bottom: 13px;
+}
+
+.project-content h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.project-content > p {
+    font-size: 13px;
+    color: #68756e;
+    line-height: 1.8;
+    min-height: 94px;
+}
+
+/* Teknologi dan kategori */
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 18px;
+    margin-bottom: 20px;
+}
+
+.project-technologies span {
+    padding: 6px 10px;
+    background-color: #f3f6f1;
+    border: 1px solid #e4eae2;
+    color: #52675b;
+    font-size: 10px;
+    border-radius: 20px;
+}
+
+/* Footer kartu */
+.project-footer {
+    padding-top: 15px;
+    border-top: 1px solid #e9ede8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-status {
+    font-size: 11px;
+    color: #89928c;
+}
+
+.project-link {
+    color: #43806b;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* Penutup */
+.projects-closing {
+    text-align: center;
+    background-color: #e8f1eb;
+    border-radius: 18px;
+    padding: 30px;
+    margin-top: 45px;
+}
+
+.projects-closing h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+    color: #2f6558;
+}
+
+.projects-closing p {
+    max-width: 600px;
+    margin: auto;
+    color: #68756e;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 760px) {
+
+    .projects-section {
+        padding: 65px 15px;
+    }
+
+    .projects-section .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-content > p {
+        min-height: auto;
+    }
+
+    .project-cover {
+        height: 220px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .project-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+/* ==========================
+   CONTACT SECTION
+========================== */
+
+.contact-page-section {
+    padding: 90px 20px;
+    background-color: #f1f5f0;
+}
+
+.contact-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Judul */
+.contact-page-section .section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-page-section .section-heading h2 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.contact-page-section .section-heading h2 span {
+    color: #43806b;
+}
+
+/* Contact introduction */
+.contact-intro {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 40px;
+    padding: 35px 25px;
+    background-color: #ffffff;
+    border: 1px solid #e4eae2;
+    border-radius: 20px;
+}
+
+.contact-decoration {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 18px;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    background-color: #e8f1eb;
+    color: #2f6558;
+    font-size: 25px;
+}
+
+.contact-intro h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.contact-intro p {
+    max-width: 530px;
+    margin: 0 auto 22px;
+    color: #68756e;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.contact-main-button {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 10px;
+    background-color: #2f6558;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-main-button:hover {
+    background-color: #214a40;
+    transform: translateY(-3px);
+}
+
+/* Contact information cards */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #e4eae2;
+    border-radius: 15px;
+    transition: 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-4px);
+    border-color: #8db69c;
+    box-shadow: 0 10px 25px rgba(47, 101, 88, 0.08);
+}
+
+.contact-icon {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background-color: #e8f1eb;
+    color: #2f6558;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.contact-card h3 {
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.contact-card p {
+    color: #68756e;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+.contact-arrow {
+    margin-left: auto;
+    color: #43806b;
+    font-size: 19px;
+}
+
+
+/* ==========================
+   FOOTER SECTION
+========================== */
+
+.main-footer {
+    background-color: #214a40;
+    color: #ffffff;
+    padding: 35px 20px 20px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 25px;
+}
+
+.footer-logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.footer-logo span {
+    color: #a8cdb5;
+}
+
+.footer-brand p {
+    color: #c5d8cd;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.footer-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.footer-navigation a {
+    color: #d6e2da;
+    font-size: 12px;
+    transition: 0.2s;
+}
+
+.footer-navigation a:hover {
+    color: #ffffff;
+}
+
+/* Footer bottom */
+.footer-bottom {
+    max-width: 1100px;
+    margin: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.18);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-bottom p {
+    color: #c5d8cd;
+    font-size: 11px;
+}
+
+.back-to-top {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* ==========================
+   RESPONSIVE CONTACT
+========================== */
+
+@media (max-width: 760px) {
+
+    .contact-page-section {
+        padding: 65px 15px;
+    }
+
+    .contact-page-section .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .contact-intro {
+        padding: 28px 18px;
+    }
+
+    .contact-intro h3 {
+        font-size: 20px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-navigation {
+        gap: 13px;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
